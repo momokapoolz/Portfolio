@@ -6,11 +6,20 @@ export interface Skill {
   icon?: string // Optional: can add icon names later
 }
 
+export type TechVariant = "default" | "blue" | "lightBlue" | "purple" | "green" | "orange" | "red" | "yellow" | "pink" | "white"
+
+export interface TechStackItem {
+  name: string
+  variant?: TechVariant
+}
+
 export interface Experience {
   title: string
   company: string
   duration: string
   description?: string
+  logoUrl?: string
+  techStack?: TechStackItem[]
 }
 
 export interface Education {
@@ -23,7 +32,7 @@ export interface Education {
 export interface Project {
   name: string
   description: string
-  techStack: string[]
+  techStack: TechStackItem[]
   githubUrl?: string
   liveUrl?: string
 }
@@ -73,12 +82,25 @@ export const profileData: ProfileData = {
       duration: "7 months",
       description:
         "Developed and maintained scalable backend systems, implemented RESTful APIs, and optimized database queries for improved performance.",
+      logoUrl: "/logos/luvina-logo.png",
+      techStack: [
+        { name: "Ruby on Rails", variant: "red" },
+        { name: "PostgreSQL", variant: "blue" },
+        { name: "Docker", variant: "lightBlue" },
+        { name: "Git", variant: "orange" },
+      ],
     },
     {
       title: "Backend Intern",
       company: "Luvina",
       duration: "2 months",
       description: "Assisted in building backend services, wrote unit tests, and contributed to code reviews.",
+      logoUrl: "/logos/luvina-logo.png",
+      techStack: [
+        { name: "Java", variant: "red" },
+        { name: "MySQL", variant: "blue" },
+        { name: "Git", variant: "orange" },
+      ],
     },
   ],
 
@@ -96,21 +118,36 @@ export const profileData: ProfileData = {
       name: "E-Commerce API",
       description:
         "Built a comprehensive REST API for an e-commerce platform with payment integration, inventory management, and order processing.",
-      techStack: ["Ruby on Rails", "PostgreSQL", "Redis", "Docker"],
+      techStack: [
+        { name: "Ruby on Rails", variant: "red" },
+        { name: "PostgreSQL", variant: "blue" },
+        { name: "Redis", variant: "red" },
+        { name: "Docker", variant: "blue" },
+      ],
       githubUrl: "https://github.com/yourusername/project",
     },
     {
       name: "Real-time Chat System",
       description:
         "Developed a scalable real-time messaging system using WebSockets, supporting group chats and file sharing.",
-      techStack: ["Golang", "PostgreSQL", "WebSocket", "Docker"],
+      techStack: [
+        { name: "Golang", variant: "blue" },
+        { name: "PostgreSQL", variant: "blue" },
+        { name: "WebSocket", variant: "green" },
+        { name: "Docker", variant: "blue" },
+      ],
       githubUrl: "https://github.com/yourusername/project",
     },
     {
       name: "Microservices Dashboard",
       description:
         "Created a monitoring dashboard for microservices architecture with health checks and performance metrics.",
-      techStack: ["NestJS", "MySQL", "React.js", "Docker"],
+      techStack: [
+        { name: "NestJS", variant: "red" },
+        { name: "MySQL", variant: "blue" },
+        { name: "React.js", variant: "blue" },
+        { name: "Docker", variant: "blue" },
+      ],
       githubUrl: "https://github.com/yourusername/project",
     },
   ],

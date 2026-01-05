@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { TechBadge } from "@/components/ui/tech-badge"
 import { Github, ExternalLink } from "lucide-react"
 import type { Project } from "@/data/profile"
 
@@ -30,9 +31,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               <div className="mb-4">
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
-                    <span key={tech} className="text-xs font-mono px-2 py-1 bg-accent/10 text-accent rounded">
-                      {tech}
-                    </span>
+                    <TechBadge key={tech.name} tech={tech.name} variant={tech.variant || "default"} size="sm" />
                   ))}
                 </div>
               </div>

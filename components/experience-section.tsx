@@ -1,7 +1,9 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { TechBadge } from "@/components/ui/tech-badge"
 import { Briefcase } from "lucide-react"
+import Image from "next/image"
 import type { Experience } from "@/data/profile"
 
 interface ExperienceSectionProps {
@@ -28,8 +30,21 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
 
                 <Card className="p-6 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="p-2 bg-accent/10 rounded-lg">
-                      <Briefcase className="h-5 w-5 text-accent" />
+                    <div className="flex items-center gap-3">
+                      {exp.logoUrl ? (
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white/10 p-1">
+                          <Image
+                            src={exp.logoUrl}
+                            alt={`${exp.company} logo`}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="p-2 bg-accent/10 rounded-lg">
+                          <Briefcase className="h-5 w-5 text-accent" />
+                        </div>
+                      )}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-foreground mb-1">{exp.title}</h3>
@@ -38,7 +53,14 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
                         <span className="text-accent">•</span>
                         <span className="text-sm">{exp.duration}</span>
                       </div>
-                      {exp.description && <p className="text-muted-foreground leading-relaxed">{exp.description}</p>}
+                      {exp.description && <p className="text-muted-foreground leading-relaxed mb-4">{exp.description}</p>}
+                      {exp.techStack && exp.techStack.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {exp.techStack.map((tech) => (
+                            <TechBadge key={tech.name} tech={tech.name} variant={tech.variant || "default"} size="sm" />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
