@@ -171,7 +171,7 @@ export const profileData: ProfileData = {
   experience: [
     {
       title: "Backend Engineer",
-      company: "Luvina",
+      company: "Luvina JSC",
       duration: "7 months",
       description: "Assisted in building backend services, wrote unit tests, and contributed to code reviews.",
       logoUrl: "/logos/luvina-logo.png",
@@ -187,7 +187,7 @@ export const profileData: ProfileData = {
     },
     {
       title: "Backend Intern",
-      company: "Luvina",
+      company: "Luvina JSC",
       duration: "2 months",
       description:
         `• 2-month internship as a Software Developer on a POS system project
