@@ -53,7 +53,7 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
                         <span className="text-accent">•</span>
                         <span className="text-sm">{exp.duration}</span>
                       </div>
-                      {exp.description && <p className="text-muted-foreground leading-relaxed mb-4">{exp.description}</p>}
+                      {exp.description && <p className="text-muted-foreground leading-relaxed mb-4 whitespace-pre-line">{exp.description}</p>}
                       {exp.techStack && exp.techStack.length > 0 && (
                         <div className="flex flex-wrap gap-2 mt-3">
                           {exp.techStack.map((tech) => (

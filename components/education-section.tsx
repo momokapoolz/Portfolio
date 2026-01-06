@@ -25,10 +25,14 @@ export function EducationSection({ education }: EducationSectionProps) {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-foreground mb-1">{edu.degree}</h3>
-                  <div className="flex flex-wrap gap-2 mb-3 text-muted-foreground">
-                    <span className="font-mono text-sm">{edu.institution}</span>
-                    <span className="text-accent">•</span>
-                    <span className="text-sm">{edu.year}</span>
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <span className="text-accent font-semibold tracking-wide">
+                      {edu.institution}
+                    </span>
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-sm text-muted-foreground">
+                      {edu.year}
+                    </span>
                   </div>
                   {edu.description && <p className="text-muted-foreground leading-relaxed">{edu.description}</p>}
                 </div>

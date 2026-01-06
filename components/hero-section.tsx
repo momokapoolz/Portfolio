@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
+import { useEffect, useState } from "react"
 
 interface HeroSectionProps {
   name: string
@@ -11,10 +12,31 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ name, title, tagline, cvPath }: HeroSectionProps) {
+  const [displayedText, setDisplayedText] = useState("")
+  const [isTypingComplete, setIsTypingComplete] = useState(false)
+
   const handleDownloadCV = () => {
     // Open CV in new tab for download
     window.open(cvPath, "_blank")
   }
+
+  // Typing animation effect
+  useEffect(() => {
+    let index = 0
+    const typingSpeed = 50 // milliseconds per character
+
+    const typingInterval = setInterval(() => {
+      if (index < tagline.length) {
+        setDisplayedText(tagline.substring(0, index + 1))
+        index++
+      } else {
+        setIsTypingComplete(true)
+        clearInterval(typingInterval)
+      }
+    }, typingSpeed)
+
+    return () => clearInterval(typingInterval)
+  }, [tagline])
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
@@ -34,8 +56,11 @@ export function HeroSection({ name, title, tagline, cvPath }: HeroSectionProps) 
           <span className="text-accent">/&gt;</span>
         </h2>
 
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-pretty">
-          {tagline}
+        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-pretty min-h-16">
+          {displayedText}
+          {!isTypingComplete && (
+            <span className="inline-block w-0.5 h-6 bg-accent ml-1 animate-blink align-middle" />
+          )}
         </p>
 
         <Button

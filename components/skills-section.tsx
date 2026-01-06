@@ -29,13 +29,20 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
               className={`p-6 bg-card/50 backdrop-blur-sm border-l-4 ${category.color} hover:bg-card/80 transition-all duration-300 hover:scale-105`}
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground">{category.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {category.items.map((skill) => (
                   <li
                     key={skill.name}
-                    className="text-muted-foreground hover:text-accent transition-colors cursor-default font-mono text-sm"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors cursor-default"
                   >
-                    • {skill.name}
+                    <span className="font-mono text-sm">• {skill.name}</span>
+                    {skill.icon && (
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} logo`}
+                        className="h-6 w-6 object-contain rounded"
+                      />
+                    )}
                   </li>
                 ))}
               </ul>
