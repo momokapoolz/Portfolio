@@ -1,9 +1,6 @@
-// CUSTOMIZATION: Edit this file to update your portfolio content
-// All data here is dynamically rendered across the website components
-
 export interface Skill {
   name: string
-  icon?: string // Optional: can add icon names later
+  icon?: string
 }
 
 export type TechVariant = "default" | "blue" | "lightBlue" | "purple" | "green" | "orange" | "red" | "yellow" | "pink" | "white"
@@ -61,18 +58,26 @@ export interface ProfileData {
   interests: Interest[]
 }
 
-// CUSTOMIZATION: Update this data with your actual information
 export const profileData: ProfileData = {
-  name: "Your Name",
+  name: "Le Gia Bao | Momoka",
   title: "Backend Engineer",
   tagline: "Building scalable systems and robust APIs that power modern applications",
-  cvPath: "/cv.pdf", // Place your CV in the public folder
-
+  cvPath: "/cv.pdf",
   skills: {
-    backend: [{ name: "Ruby on Rails" }, { name: "Golang" }, { name: "Java" }, { name: "NestJS" }],
-    frontend: [{ name: "React.js" }, { name: "Bootstrap" }],
-    database: [{ name: "MySQL" }, { name: "PostgreSQL" }],
-    tools: [{ name: "Docker" }, { name: "Git" }],
+    backend: [
+      { name: "Ruby on Rails" },
+      { name: "Golang" },
+      { name: "Java" },
+      { name: "NodeJS" }],
+    frontend: [
+      { name: "React.js" },
+      { name: "Bootstrap" }],
+    database: [
+      { name: "MySQL" },
+      { name: "PostgreSQL" }],
+    tools: [
+      { name: "Docker" },
+      { name: "Git" }],
   },
 
   experience: [
