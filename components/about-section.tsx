@@ -85,32 +85,6 @@ export function AboutSection({ about }: AboutSectionProps) {
                                     )
                                 })}
                             </motion.p>
-
-                            {/* Decorative elements */}
-                            <motion.div
-                                className="flex justify-center gap-2 mt-8"
-                                initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 1 }}
-                            >
-                                {['dot-1', 'dot-2', 'dot-3'].map((id, i) => (
-                                    <motion.div
-                                        key={id}
-                                        className="w-2 h-2 rounded-full bg-accent/50"
-                                        animate={{
-                                            scale: [1, 1.5, 1],
-                                            opacity: [0.5, 1, 0.5],
-                                        }}
-                                        transition={{
-                                            duration: 2,
-                                            delay: i * 0.2,
-                                            repeat: Infinity,
-                                            repeatType: "reverse",
-                                        }}
-                                    />
-                                ))}
-                            </motion.div>
                         </Card>
                     </motion.div>
                 </motion.div>
