@@ -43,6 +43,7 @@ export interface ProfileData {
   name: string
   title: string
   tagline: string
+  about: string
   cvPath: string // Path to CV PDF in public folder
   email: string
 
@@ -63,6 +64,7 @@ export const profileData: ProfileData = {
   name: "Le Gia Bao | Momoka",
   title: "Backend Engineer",
   tagline: "Building scalable systems and robust APIs that power modern applications",
+  about: "I’m a Backend Engineer focused on building scalable, efficient, and maintainable systems. I enjoy solving complex problems and developing robust APIs. Always learning and exploring new technologies.",
   cvPath: "/cv.pdf",
   email: "lgbao2004@gmail.com",
   skills: {

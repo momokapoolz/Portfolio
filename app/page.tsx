@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
+import { AboutSection } from "@/components/about-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { EducationSection } from "@/components/education-section"
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       <div id="home">
         <HeroSection
           name={profileData.name}
@@ -23,6 +24,10 @@ export default function Home() {
           tagline={profileData.tagline}
           cvPath={profileData.cvPath}
         />
+      </div>
+
+      <div id="about">
+        <AboutSection about={profileData.about} />
       </div>
 
       <div id="skills">
