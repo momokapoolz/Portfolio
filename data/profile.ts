@@ -68,102 +68,79 @@ export const profileData: ProfileData = {
   skills: {
     backend: [
       {
-        name: "Ruby on Rails",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg",
+        name: "Ruby on Rails"
       },
       {
-        name: "Golang",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+        name: "Golang"
       },
       {
-        name: "Java",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        name: "Java"
       },
       {
-        name: "Spring Boot",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        name: "Spring Boot"
       },
       {
-        name: "NodeJS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        name: "NodeJS"
       },
       {
-        name: "Python",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        name: "Python"
       },
       {
-        name: "NestJS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+        name: "NestJS"
       },
     ],
     frontend: [
       {
-        name: "React.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        name: "React.js"
       },
       {
-        name: "Next.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        name: "Next.js"
       },
       {
-        name: "Bootstrap",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        name: "Bootstrap"
       },
       {
-        name: "HTML",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        name: "HTML"
       },
       {
-        name: "CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        name: "CSS"
       },
       {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        name: "JavaScript"
       },
       {
-        name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        name: "TypeScript"
       },
     ],
     database: [
       {
-        name: "MySQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        name: "MySQL"
       },
       {
-        name: "PostgreSQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        name: "PostgreSQL"
       },
       {
-        name: "MongoDB",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        name: "MongoDB"
       },
       {
-        name: "Redis",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+        name: "Redis"
       },
       {
-        name: "SQLite",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+        name: "SQLite"
       },
     ],
     tools: [
       {
-        name: "AWS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+        name: "AWS"
       },
       {
-        name: "Docker",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        name: "Docker"
       },
       {
-        name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        name: "Git"
       },
       {
-        name: "Linux",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+        name: "Linux"
       },
     ],
   },
@@ -225,45 +202,50 @@ export const profileData: ProfileData = {
       description:
         "Built a comprehensive REST API for an e-commerce platform with payment integration, inventory management, and order processing.",
       techStack: [
-        { name: "Ruby on Rails", variant: "red" },
+        { name: "NestJS", variant: "pink" },
+        { name: "Next.js", variant: "white" },
         { name: "PostgreSQL", variant: "blue" },
+        { name: "PrismaORM", variant: "green" },
         { name: "Redis", variant: "red" },
         { name: "Docker", variant: "blue" },
       ],
-      githubUrl: "https://github.com/yourusername/project",
+      githubUrl: "https://github.com/momokapoolz/eCommerce-Backend-Amazon-based.git",
     },
     {
-      name: "Real-time Chat System",
+      name: "Calories Tracker API",
       description:
-        "Developed a scalable real-time messaging system using WebSockets, supporting group chats and file sharing.",
+        "Developed a RESTful API for a calories tracking application that allows users to log meals, track nutrition, and set fitness goals.",
       techStack: [
         { name: "Golang", variant: "blue" },
+        { name: "Gin", variant: "lightBlue" },
         { name: "PostgreSQL", variant: "blue" },
-        { name: "WebSocket", variant: "green" },
+        { name: "GORM", variant: "lightBlue" },
+        { name: "Redis", variant: "red" },
         { name: "Docker", variant: "blue" },
+        { name: "JWT", variant: "yellow" }
       ],
-      githubUrl: "https://github.com/yourusername/project",
+      githubUrl: "https://github.com/momokapoolz/Calories-app-like-cronometer.git",
     },
     {
-      name: "Microservices Dashboard",
+      name: "Calories Tracker Web App",
       description:
-        "Created a monitoring dashboard for microservices architecture with health checks and performance metrics.",
+        "Created a responsive web application for tracking daily calorie intake, meal planning, and nutritional analysis integrated with Calories Tracker API.",
       techStack: [
-        { name: "NestJS", variant: "red" },
-        { name: "MySQL", variant: "blue" },
-        { name: "React.js", variant: "blue" },
-        { name: "Docker", variant: "blue" },
+        { name: "Next.js", variant: "white" },
+        { name: "TypeScript", variant: "blue" },
+        { name: "React.js", variant: "lightBlue" },
+        { name: "Tailwind CSS", variant: "blue" },
       ],
-      githubUrl: "https://github.com/yourusername/project",
+      githubUrl: "https://github.com/momokapoolz/Calories-app-Frontend.git",
     },
   ],
 
   interests: [
     { name: "Open Source" },
     { name: "System Design" },
-    { name: "DevOps" },
     { name: "Reading Tech Blogs" },
-    { name: "Hiking" },
-    { name: "Photography" },
+    { name: "Gym" },
+    { name: "Martial Arts" },
+    { name: "Anime" },
   ],
 }

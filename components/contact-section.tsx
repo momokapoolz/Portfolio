@@ -18,7 +18,7 @@ export function ContactSection() {
               Get In Touch
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              I'm always looking for new opportunities to collaborate and grow. If you have something in mind, I'd love to hear from you.
+              I'm always excited to explore new opportunities to collaborate and grow. If you have an idea, I'd be happy to hear from you.
             </p>
           </div>
           <Button
